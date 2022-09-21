@@ -18,7 +18,7 @@ script:
   - docker-compose -f docker-compose-build.yaml build --parallel 
   - docker tag udagram-api-feed mamaafrica/udagram-api-feed:latest
   - docker tag udagram-api-user mamaafrica/udagram-api-user:latest
-  - docker tag udagram-frontend mamaafrica/udagram-frontend:local
+  - docker tag udagram-frontend mamaafrica/udagram-frontend:latest
   - docker tag reverseproxy mamaafrica/reverseproxy:latest
 
 after_success:

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reverseproxy
+  labels:
+    run: reverseproxy
+spec:
+  selector:
+    app: reverseproxy
+    run: reverseproxy
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080

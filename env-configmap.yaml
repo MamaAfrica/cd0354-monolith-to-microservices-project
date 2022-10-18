@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: my-configmap
+  name: env-configmap
 data:
-  POSTGRES_HOST: database-1.cw5o7xtjdbye.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: database-1.cfcezaoesipz.us-west-2.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_BUCKET: microbucketmimi
-  AWS_REGION: us-east-1
+  AWS_REGION: us-west-2
   AWS_PROFILE: default
   JWT_SECRET: testing
   URL: http://localhost:8100

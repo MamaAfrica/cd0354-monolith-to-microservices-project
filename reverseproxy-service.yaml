@@ -8,6 +8,7 @@ spec:
   selector:
     app: reverseproxy
     run: reverseproxy
+  type: LoadBalancer
   ports:
   - port: 8080
     protocol: TCP

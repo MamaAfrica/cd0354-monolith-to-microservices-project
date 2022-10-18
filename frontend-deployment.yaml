@@ -27,9 +27,45 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
-        envFrom:
-          - configMapRef:
-              name: my-configmap
-          - secretRef:
-              name: my-secret
+        env:
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+             secretKeyRef:
+                name: env-secret
+                key: POSTGRES_PASSWORD
+          - name: POSTGRES_USER
+            valueFrom:
+             secretKeyRef:
+                name: env-secret
+                key: POSTGRES_USER
+          - name: POSTGRES_HOST
+            valueFrom:
+             configMapKeyRef:
+                name: env-configmap
+                key: POSTGRES_HOST
+          - name: POSTGRES_DB
+            valueFrom:
+             configMapKeyRef:
+                name: env-configmap
+                key: POSTGRES_DB
+          - name: AWS_BUCKET
+            valueFrom:
+             configMapKeyRef:
+                name: env-configmap
+                key: AWS_BUCKET
+          - name: AWS_REGION
+            valueFrom:
+             configMapKeyRef:
+                name: env-configmap
+                key: AWS_REGION
+          - name: JWT_SECRET
+            valueFrom:
+             configMapKeyRef:
+                name: env-configmap
+                key: JWT_SECRET
+          - name: AWS_PROFILE
+            valueFrom:
+             configMapKeyRef:
+                name: env-configmap
+                key: AWS_PROFILE
 

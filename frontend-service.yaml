@@ -8,6 +8,7 @@ spec:
   selector:
     app: udagram-frontend
     run: udagram-frontend
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP

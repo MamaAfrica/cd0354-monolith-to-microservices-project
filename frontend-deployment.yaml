@@ -33,11 +33,11 @@ spec:
              secretKeyRef:
                 name: env-secret
                 key: POSTGRES_PASSWORD
-          - name: POSTGRES_USER
+          - name: POSTGRES_USERNAME
             valueFrom:
              secretKeyRef:
                 name: env-secret
-                key: POSTGRES_USER
+                key: POSTGRES_USERNAME
           - name: POSTGRES_HOST
             valueFrom:
              configMapKeyRef:

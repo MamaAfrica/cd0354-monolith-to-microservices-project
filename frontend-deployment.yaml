@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: mamaafrica/udagram-frontend
+        image: mamaafrica/udagram-frontend:v5
         imagePullPolicy: Always
         resources:
           requests:

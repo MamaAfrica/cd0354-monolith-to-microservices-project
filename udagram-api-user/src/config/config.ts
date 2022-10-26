@@ -1,4 +1,15 @@
 export const config = {
+  // 'username': 'mimidb',
+  // 'password': 'Mimigrace123',
+  // 'database': 'postgres',
+  // 'host': 'database-1.cmstuwkj3dhx.us-east-2.rds.amazonaws.com',
+  // 'dialect': 'postgres',
+  // 'aws_region': 'us-east-2',
+  // 'aws_profile': 'default',
+  // 'aws_media_bucket': 'mymicrobucket',
+  // 'url': 'locahost:8100',
+  // 'jwt': {
+  //   'secret': 'testing',
   'username': process.env.POSTGRES_USERNAME,
   'password': process.env.POSTGRES_PASSWORD,
   'database': process.env.POSTGRES_DB,
